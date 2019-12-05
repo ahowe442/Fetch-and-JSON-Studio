@@ -10,10 +10,16 @@ window.addEventListener("load", function() {
         container.innerHTML += `
                     <div class="astronaut">
                         <div class="bio">
-                            <h3>${json[index].firstName} ${json[index].lastName}</h3>
+                            <h3>${json[index].firstName} ${
+          json[index].lastName
+        }</h3>
                             <ul>
-                                <li>Hours in space: ${json[index].hoursInSpace}</li>
-                                <li id='active'>Active: ${json[index].active}</li>
+                                <li>Hours in space: ${
+                                  json[index].hoursInSpace
+                                }</li>
+                                <li id='active' class='${
+                                  json[index].active ? "green" : "red"
+                                }'>Active: ${json[index].active}</li>
                                 <li>Skills: ${json[index].skills}</li>
                             </ul>
                         </div>
